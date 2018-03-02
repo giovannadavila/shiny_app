@@ -11,12 +11,11 @@
 library(shiny)
 library(tidyverse)
 library(leaflet)
-library(tmap)
 
 #Load data
 farmers_market <- read_csv("farmers_market.csv")
 
-# Define UI for application that draws a histogram
+# Define UI for application 
 ui <- fluidPage(
    
    # Application title
@@ -25,26 +24,34 @@ ui <- fluidPage(
    # Sidebar with a dropdown input and check box 
    sidebarLayout(
       sidebarPanel(
-        selectInput("county", label = h3("Select County:"), choices = unique(farmers_market$County) 
-                ) 
+        selectInput("county", label = h3("Select County:"), 
+                    choices = unique(farmers_market$County) 
+                )
+        
+        #Add in checkbox function here
+        
       ),
       
 
-      # Show a plot of the generated distribution
+      # Show a map of the filtered farmers markets 
       mainPanel(
-         plotOutput("distPlot") # Change to map
+        leafletOutput("market_map")
       )
    )
 )
 
-# Define server logic required to draw a histogram
+# Define server logic required to make map and table
 server <- function(input, output) {
   
-  output$value <- renderPrint({ input$select 
+  output$market_map <- renderLeaflet({ 
     
     #Set output for county selection
     fm <- farmers_market %>% 
       filter(County == input$county)
+    
+    #Create map as a function of 'county' input and 'product' input
+    leaflet() %>% 
+      addTiles()
     
     })
    
