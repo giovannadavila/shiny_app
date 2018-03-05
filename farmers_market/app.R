@@ -11,52 +11,87 @@
 library(shiny)
 library(tidyverse)
 library(leaflet)
+library(DT)
+library(reshape2)
 
 #Load data
-farmers_market <- read_csv("farmers_market.csv")
+farmers_market <- read_csv("farmers_market.csv") # Complete dataset
+farmers_market_short <- read_csv("farmers_market_short.csv") # Filtered for melt()
+
+# Wrangle data
+
+fm_melt <- farmers_market_short %>%
+  rename("Baked Goods" = Bakedgoods) %>% 
+  melt(id = c("MarketName", "Website", "County", "address", "latitude", "longitude")) %>% 
+  rename("Product" = variable, "Availability" = value)
+
+
+# Shiny App
+#################################################
 
 # Define UI for application 
 ui <- fluidPage(
    
    # Application title
-   titlePanel("Central Coast Farmer's Market Directory"),
+   titlePanel("Central Coast Farmers Market Directory"),
    
    # Sidebar with a dropdown input and check box 
    sidebarLayout(
       sidebarPanel(
         selectInput("county", label = h3("Select County:"), 
-                    choices = unique(farmers_market$County) 
-                )
+                    choices = unique(fm_melt$County)),
         
-        #Add in checkbox function here
+  
+        checkboxGroupInput("product", label = h3("Select Products:"), choices = unique(fm_melt$Product))
         
       ),
       
 
-      # Show a map of the filtered farmers markets 
+      # Setting leaflet map and table outputs on the main panel 
       mainPanel(
-        leafletOutput("market_map")
+        leafletOutput("market_map"),
+        
+        DT::dataTableOutput("market_table")
+      
       )
    )
-)
+)   
 
 # Define server logic required to make map and table
 server <- function(input, output) {
   
+  #Set leaflet map output
   output$market_map <- renderLeaflet({ 
     
-    #Set output for county selection
-    fm <- farmers_market %>% 
+    #Create map dataset for widget inputs: county selection & product
+    fm_map <- fm_melt %>% 
       filter(County == input$county)
+    #How to filter the mapped dataset based on the 'product' checkbox input??
     
-    #Create map as a function of 'county' input and 'product' input
-    leaflet() %>% 
-      addTiles()
-    
-    })
-   
-  
+    #Create map with popup markers using fm_map created above
+    leaflet(fm_map) %>% 
+      addTiles() %>% 
+      addMarkers(popup = ~as.character(fm_map$address))
       
+    })
+  
+  
+  
+  output$market_table <- DT :: renderDataTable({ 
+    spacing = c("xs")
+    width = "auto"
+    
+    #Create table dataset for widget inputs: county selection & product
+    fm_table <- fm_melt %>% 
+      filter(County == input$county) %>% #  && Product == input$product
+      select(MarketName, address, Website) %>% 
+      rename("Name of Market" = MarketName, "Address" = address)
+    #How to filter by the 'product' checkbox input and not have the repeated counties from the melted df show up??
+    
+    #Create table using fm_table dataset created above
+    DT :: datatable(fm_table)
+    
+  })
       
    }
 
