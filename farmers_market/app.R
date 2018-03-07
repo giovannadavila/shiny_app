@@ -26,6 +26,7 @@ fm_melt <- farmers_market_short %>%
   rename("Product" = variable, "Availability" = value)
 
 
+
 # Shiny App
 #################################################
 
@@ -33,7 +34,7 @@ fm_melt <- farmers_market_short %>%
 ui <- fluidPage(
    
    # Application title
-   titlePanel("Central Coast Farmers Market Directory"),
+   titlePanel("California Central Coast Farmers Market Directory"),
    
    # Sidebar with a dropdown input and check box 
    sidebarLayout(
@@ -42,7 +43,7 @@ ui <- fluidPage(
                     choices = unique(fm_melt$County)),
         
   
-        checkboxGroupInput("product", label = h3("Select Products:"), choices = unique(fm_melt$Product))
+        checkboxGroupInput("product", label = h3("Select Products:"), choices = unique(fm_melt$Product), "No products")
         
       ),
       
@@ -65,13 +66,14 @@ server <- function(input, output) {
     
     #Create map dataset for widget inputs: county selection & product
     fm_map <- fm_melt %>% 
-      filter(County == input$county)
-    #How to filter the mapped dataset based on the 'product' checkbox input??
+      filter(County %in% input$county) %>% 
+      filter(Product %in% input$product & Availability %in% "Y")
+    
     
     #Create map with popup markers using fm_map created above
     leaflet(fm_map) %>% 
       addTiles() %>% 
-      addMarkers(popup = ~as.character(fm_map$address))
+      addMarkers(popup = ~as.character(fm_map$address)) 
       
     })
   
@@ -81,12 +83,15 @@ server <- function(input, output) {
     spacing = c("xs")
     width = "auto"
     
-    #Create table dataset for widget inputs: county selection & product
+    #Create table dataframe for widget inputs: county selection & product
     fm_table <- fm_melt %>% 
-      filter(County == input$county) %>% #  && Product == input$product
+      filter(County %in% input$county) %>%
+      filter(Product %in% input$product) %>% 
+      filter(Availability %in% "Y") %>% 
       select(MarketName, address, Website) %>% 
-      rename("Name of Market" = MarketName, "Address" = address)
-    #How to filter by the 'product' checkbox input and not have the repeated counties from the melted df show up??
+      rename("Name of Market" = MarketName, "Address" = address) #%>% 
+     # unique(fm_melt$MarketName, incomparables = , fromLast = TRUE)
+    
     
     #Create table using fm_table dataset created above
     DT :: datatable(fm_table)
