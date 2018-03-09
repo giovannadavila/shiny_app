@@ -11,7 +11,6 @@
 library(shiny)
 library(tidyverse)
 library(leaflet)
-library(DT)
 library(reshape2)
 
 #Load data
@@ -43,7 +42,7 @@ ui <- fluidPage(
                     choices = unique(fm_melt$County)),
         
   
-        checkboxGroupInput("product", label = h3("Select Products:"), choices = unique(fm_melt$Product), "No products")
+        radioButtons("product", label = h3("Select Products:"), choices = unique(fm_melt$Product), "No products")
         
       ),
       
