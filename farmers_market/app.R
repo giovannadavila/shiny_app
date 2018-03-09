@@ -78,7 +78,7 @@ server <- function(input, output) {
     })
   
   
-  
+  #Create table output
   output$market_table <- DT :: renderDataTable({ 
     spacing = c("xs")
     width = "auto"
@@ -90,7 +90,7 @@ server <- function(input, output) {
       filter(Availability %in% "Y") %>% 
       select(MarketName, address, Website) %>% 
       rename("Name of Market" = MarketName, "Address" = address) #%>% 
-     # unique(fm_melt$MarketName, incomparables = , fromLast = TRUE)
+      #unique(fm_melt$MarketName, incomparables = , fromLast = TRUE)
     
     
     #Create table using fm_table dataset created above

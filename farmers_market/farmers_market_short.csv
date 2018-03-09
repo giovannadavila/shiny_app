@@ -1,0 +1,40 @@
+MarketName,Website,address,County,longitude,latitude,Bakedgoods,Cheese,Flowers,Eggs,Herbs,Vegetables,Honey,Jams,Nuts,Plants,Coffee,Fruits,Grains,Juices
+Atascadero Main Street CFM,,"Palma & Entrada, Atascadero, California 93422",San Luis Obispo,-120.669,35.4901,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Nipomo Certified Farmers' Market,http://www.nipomofarmersmarket.com,"1645 Trilogy Parkway, Nipomo, California 93444",San Luis Obispo,-120.552313,35.030541,Y,N,N,Y,N,Y,Y,Y,Y,N,N,Y,N,N
+Morro Bay Thursday CFM,http://www.morrobay.org,"2650 Main St., Spencers Market, Morro Bay, California 93442",San Luis Obispo,-120.859,35.3904,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Arroyo Grande Oak Park Plaza Farmers Market,,"East Branch, K-Mart Parking Lot, Arroyo Grande, California 93420",San Luis Obispo,-120.552,35.1271,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Arroyo Grande Spencers CFM,,"1464 E. Grand Avenue, Arroyo Grande, California ",San Luis Obispo,-120.606,35.1221,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Spencer's Market - Morro Bay,http://www.slocountyfarmers.org,"Hwy. 1, North of Hwy. 41 Jtn., Morro Bay, California 93442",San Luis Obispo,-120.859,35.3904,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Cayucos Farmers Market,,"Vets Hall Parking Lot, Cayucos, California 93430",San Luis Obispo,-120.912,35.4454,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Country Farm & Craft Market Paso Park,http://www.countryfarmandcraftmarket.com,"Spring & 11th Street, Paso Robles, California 93446",San Luis Obispo,-120.691,35.6258,Y,N,Y,N,Y,Y,Y,Y,Y,Y,N,N,N,N
+Country Farm & Craft Market Paso Park,http://www.countryfarmandcraftmarket.com,"Golden Hills Shopping Center (Lowe's), Paso Robles, California 93446",San Luis Obispo,-120.659,35.6447,N,N,Y,N,Y,Y,N,N,N,N,N,N,N,N
+Country Farm & Craft Market Paso Park,http://www.countryfarmandcraftmarket.com,"81 Wellsona Road, Paso Robles, California 93446",San Luis Obispo,-120.697,35.6958,Y,N,Y,N,Y,Y,N,N,N,Y,N,N,N,N
+Atascadero Farmers Market,,"Morro Road & El Camino Real, Paso Robles, California 93447",San Luis Obispo,-120.667,35.4882,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Baywood/Los Osos Certified Farmers Market,http://www.northcountyfarmersmarkets.com,"2nd Street & Santa Maria, Baywood , California 93412",San Luis Obispo,-120.840899,35.328154,Y,Y,Y,Y,Y,Y,Y,Y,N,Y,N,Y,N,N
+Cambria Farmers Market,,"Veterans Memorial Hall, Main & Cambria Streets, Cambria, California 93428",San Luis Obispo,-121.096,35.5644,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Orcutt Farmers Market,,"Bradley St. & Clark St., Nipomo, California 93444",San Luis Obispo,-120.419,34.865,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+San Miguel Farmers Market,,"Mission & 10th, Paso Robles, California 93446",San Luis Obispo,-120.697,35.7477,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Templeton CFM,http://www.northcountyfarmersmarkets.com,"6th St. & Crocker, Templeton, California 93446",San Luis Obispo,-120.707,35.5491,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+San Luis Obispo Certified Farmers' Market ,http://www.sloccfm.com,"3889 Long Street, San Luis Obispo , California 93401",San Luis Obispo,-120.67078,35.247382,Y,N,Y,Y,N,Y,N,Y,N,N,N,Y,N,Y
+Santa Barbara La Cumbre Farmers Market,http://www.sbfarmersmarket.org,"110 South Hope Avenue, Santa Barbara, California 93101",Santa Barbara,-119.747,34.4378,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Santa Maria CFM,,"Santa Maria Town Center, 371 Town Center E., Santa Maria, California 93454",Santa Barbara,-120.437344,34.950585,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Lompoc Farmers Market,,"Ocean St. & I St., Nipomo, California 93444",Santa Barbara,-120.459,34.6389,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Solvang CFM,http://www.sbfarmersmarket.org,"Copenhagen Dr. & 1st St., Solvang, California 93101",Santa Barbara,-120.14,34.595,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Santa Barbara Farmers Market,http://www.sbfarmersmarket.org,"600 Santa Barbara St., Santa Barbara, California 93103",Santa Barbara,-119.695,34.4199,Y,Y,Y,N,Y,Y,Y,Y,Y,Y,N,N,N,N
+Santa Barbara Farmers Market,http://www.sbfarmersmarket.org,"600 State Street, Santa Barbara, California 93103",Santa Barbara,-119.697,34.4177,Y,Y,Y,N,Y,Y,Y,Y,Y,Y,N,N,N,N
+Santa Barbara Farmers Market,http://www.sbfarmersmarket.org,"7004 Marketplace Drive, Goleta, California 93105",Santa Barbara,-119.872,34.4293,Y,Y,Y,N,Y,Y,N,Y,Y,Y,N,N,N,N
+Harding Elementary School CFM,,"1625 Robbins Street, Santa Barbara, California ",Santa Barbara,-119.722,34.4166,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Carpenteria CFM,,"800 Block Linden Ave., Carpenteria, California ",Santa Barbara,-119.52,34.3976,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Goleta FM,,"5748 Calle Real Shopping Center, Goleta, California ",Santa Barbara,-119.825,34.4417,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Vandenberg Village Certified Farmers Market,http://www.villagegoesgreen.org,"120 Burton Mesa Blvd, Vandenberg Village, California 93436",Santa Barbara,-120.468728,34.699856,Y,N,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,Y
+Port Huemene Farmers Market,,"Walnut & Lyons, Port Huemene, California 93041",Ventura,-118.531,34.3809,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Santa Paula CFM,,"Hallock and Telegraph, Santa Paula, California 93013",Ventura,-119.106,34.3817,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+Ojai Certified Farmers Market,http://www.ojaicertifiedfarmersmarket.com,"300 E Matilija St, Ojai, California 93023",Ventura,-119.244,34.4489,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+Ventura Saturday Downtown CFM,http://www.vccfarmersmarkets.com,"Santa Clara & Palm Streets, Ventura, California 93001",Ventura,-119.295915,34.279734,Y,Y,Y,Y,Y,Y,Y,Y,N,Y,N,Y,N,N
+Thousand Oaks Certified Farmers' Market,http://www.vccfarmersmarkets.com,"230 W. Hillcrest Drive, Thousand Oaks, California 91301",Ventura,-118.88376,34.181413,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,Y,N,N
+Santa Clarita Certified Farmers' Market,http://www.vccfarmersmarkets.com,"26455 N. Rockwell Canyon Road, Santa Clarita, California 91355",Ventura,-119.050939,34.245836,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,Y,N,Y
+Midtown Ventura Certified Farmers' Market,http://www.vccfarmersmarkets.com,"3301 N. Main Street, Ventura, California 93001",Ventura,-119.050682,34.23639,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,Y,N,N
+Pleasant Valley Certified Farmers' Market and Crafter's Corner ,http://www.vccfarmersmarket.com,"1605 E. Burnley Street, Camarillo, California 93012",Ventura,-119.050671,34.22634,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,Y,N,N
+Simi Valley City Hall Certified Farmers' Market,,"2757 Tapo Canyon Rd., Simi Valley, California 93093",Ventura,-118.718091,34.285295,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,Y,Y,N,N
+Oxnard Farmers Market,http://www.OxnardFarmersMarket.com,"Fifth and C Street, Oxnard, California 93030",Ventura,-119.180102,34.198012,Y,N,Y,N,Y,Y,Y,N,Y,Y,N,Y,N,N
+Camarillo Hospice Certified Farmers Market,http://camarillofarmersmarket.com,"2220 Ventura Blvd., Camarillo , California 93010",Ventura,-119.041311,34.216538,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,N,Y
