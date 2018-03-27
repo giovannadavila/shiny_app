@@ -1,11 +1,3 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
 
 #Load packages
 library(shiny)
@@ -14,8 +6,7 @@ library(leaflet)
 library(reshape2)
 
 #Load data
-farmers_market <- read_csv("farmers_market.csv") # Complete dataset
-farmers_market_short <- read_csv("farmers_market_short.csv") # Filtered for melt()
+farmers_market_short <- read_csv("farmers_market_short.csv") # Simplified for melt()
 
 # Wrangle data
 
@@ -38,11 +29,13 @@ ui <- fluidPage(
    # Sidebar with a dropdown input and check box 
    sidebarLayout(
       sidebarPanel(
+        
+        # County dropdown widget
         selectInput("county", label = h3("Select County:"), 
                     choices = unique(fm_melt$County)),
         
-  
-        radioButtons("product", label = h3("Select Products:"), choices = unique(fm_melt$Product), "No products")
+        #Product widget
+        radioButtons("product", label = h3("Select Products:"), choices = unique(fm_melt$Product), "Baked Goods")
         
       ),
       
@@ -89,7 +82,6 @@ server <- function(input, output) {
       filter(Availability %in% "Y") %>% 
       select(MarketName, address, Website) %>% 
       rename("Name of Market" = MarketName, "Address" = address) #%>% 
-      #unique(fm_melt$MarketName, incomparables = , fromLast = TRUE)
     
     
     #Create table using fm_table dataset created above
